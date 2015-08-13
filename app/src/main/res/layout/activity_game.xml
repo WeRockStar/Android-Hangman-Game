@@ -102,10 +102,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/textView6"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/layoutLetters"
-        android:layout_marginTop="200dp"
         android:layout_marginLeft="20dp"
-        android:textColor="@color/red" />
+        android:textColor="@color/red"
+        android:layout_above="@+id/layoutLetters"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
