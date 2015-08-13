@@ -22,6 +22,9 @@ public class GameActivity extends Activity {
     int mFailedCounter = 0;
     int mGuessedLetters = 0;
 
+    int mPoint = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +66,7 @@ public class GameActivity extends Activity {
 
         if (mGuessedLetters == mWord.length()) {
             //TODO Winer Score One Point
+            mPoint++;
             //TODO Clear
             clearScreen();
 
@@ -84,7 +88,7 @@ public class GameActivity extends Activity {
         }
 
         //clear image to zero
-        ImageView imageView = (ImageView)findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.hangdroid_0);
     }
 
@@ -115,7 +119,8 @@ public class GameActivity extends Activity {
         } else if (mFailedCounter == 6) {
             //TODO game over
             //go to Game Over Screen
-            Intent intent = new Intent(GameActivity.this , GameOverActivity.class);
+            Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
+            intent.putExtra("POINTS", mPoint);
             startActivity(intent);
         }
     }
