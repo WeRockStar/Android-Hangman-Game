@@ -67,14 +67,10 @@ public class GameActivity extends Activity {
         }
 
         if (mGuessedLetters == mWord.length()) {
-            //TODO Winer Score One Point
-            mPoint += 1;
-            //TODO Clear
+            mPoint++;
+            Log.d("POINTS", "POINT : " + mPoint);
             clearScreen();
-
-            //TODO Random Word
             setRandomWord();
-
         }
     }
 
@@ -124,9 +120,11 @@ public class GameActivity extends Activity {
         } else if (mFailedCounter == 6) {
             //TODO game over
             //go to Game Over Screen
-            Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
-            intent.putExtra("POINTS", mPoint);
-            startActivity(intent);
+            Intent intentOver = new Intent(this, GameOverActivity.class);
+            intentOver.putExtra("POINTS_IDENTIFIER", mPoint);
+            startActivity(intentOver);
+            //kill activity
+            finish();
         }
     }
 

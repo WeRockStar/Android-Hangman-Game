@@ -14,7 +14,7 @@ public class GameOverActivity extends Activity {
         setContentView(R.layout.activity_game_over);
 
         //name , default values
-        int points = getIntent().getIntExtra("POINTS", 0);
+        int points = getIntent().getIntExtra("POINTS_IDENTIFIER", 0);
         TextView textView = (TextView) findViewById(R.id.textViewPoints);
         textView.setText(String.valueOf(points));
     }
