@@ -137,6 +137,11 @@ public class GameActivity extends Activity {
         String[] arrayWord = word.split(" ");
 
         int randomNumber = (int) (Math.random() * arrayWord.length);
+        //At index arrayWord
+        String randomWord = arrayWord[randomNumber];
+        //mWord -> random
+        Log.d("Random", "Random is : " + randomWord);
+        mWord = randomWord;
     }
 
     public void showLetterAtIndex(int position, char letterGuessed) {
