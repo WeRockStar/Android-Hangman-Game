@@ -1,6 +1,7 @@
 package com.example.kotchaphanmuangsan.hangmangame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -112,7 +113,10 @@ public class GameActivity extends Activity {
         } else if (mFailedCounter == 5) {
             imageView.setImageResource(R.drawable.hangdroid_5);
         } else if (mFailedCounter == 6) {
-            //game over
+            //TODO game over
+            //go to Game Over Screen
+            Intent intent = new Intent(GameActivity.this , GameOverActivity.class);
+            startActivity(intent);
         }
     }
 
