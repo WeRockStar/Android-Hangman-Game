@@ -13,11 +13,11 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startSinglePlayGame(new View(this));
     }
 
     public void startSinglePlayGame(View v){
-        Intent intent = new Intent(this , MainActivity.class);
+        Intent intent = new Intent(this , GameActivity.class);
+        startActivity(intent);
     }
 
 }
