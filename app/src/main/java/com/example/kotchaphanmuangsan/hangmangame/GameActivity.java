@@ -18,7 +18,7 @@ import org.w3c.dom.Text;
  */
 public class GameActivity extends Activity {
 
-    String mWord = "WORD";
+    String mWord;
     int mFailedCounter = 0;
     int mGuessedLetters = 0;
 
@@ -29,6 +29,8 @@ public class GameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        setRandomWord();
     }
 
     public void introdueLetter(View v) {
@@ -66,9 +68,12 @@ public class GameActivity extends Activity {
 
         if (mGuessedLetters == mWord.length()) {
             //TODO Winer Score One Point
-            mPoint++;
+            mPoint += 1;
             //TODO Clear
             clearScreen();
+
+            //TODO Random Word
+            setRandomWord();
 
         }
     }
@@ -123,6 +128,11 @@ public class GameActivity extends Activity {
             intent.putExtra("POINTS", mPoint);
             startActivity(intent);
         }
+    }
+
+    public void setRandomWord() {
+        //TODO set a value to mWORD
+
     }
 
     public void showLetterAtIndex(int position, char letterGuessed) {
