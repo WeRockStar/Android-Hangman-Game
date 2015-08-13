@@ -82,7 +82,7 @@ public class GameActivity extends Activity {
             currentTextView.setText("_");
         }
 
-        //clear image to zero 
+        //clear image to zero
         ImageView imageView = (ImageView)findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.hangdroid_0);
     }
