@@ -44,5 +44,7 @@ public class GameOverActivity extends Activity {
 
         //save
         editor.commit();
+
+        finish();
     }
 }
