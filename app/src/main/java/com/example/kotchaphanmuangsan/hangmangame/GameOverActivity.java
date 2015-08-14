@@ -39,7 +39,8 @@ public class GameOverActivity extends Activity {
 
         //List Name and edit local storage
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("SCORE", name + " " + mPoint + " POINTS \n");
+        String previousScore = preferences.getString("SCORES", "");
+        editor.putString("SCORES", name + " " + mPoint + " POINTS \n");
 
         //save
         editor.commit();
