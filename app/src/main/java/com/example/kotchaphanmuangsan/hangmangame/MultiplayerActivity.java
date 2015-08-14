@@ -14,14 +14,13 @@ public class MultiplayerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplayer);
-
-
+        
     }
 
     public void startMultiGame(View v) {
         EditText editText = (EditText) findViewById(R.id.editTextWord);
         String wordToGuess = editText.getText().toString();
-
+        editText.setText("");
         Intent intent = new Intent(this, GameMultiActivity.class);
         intent.putExtra("WORD", wordToGuess);
         startActivity(intent);

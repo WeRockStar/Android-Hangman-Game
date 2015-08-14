@@ -70,16 +70,19 @@ public class GameMultiActivity extends Activity {
         }
 
         if (mGuessedLetters == mWord.length()) {
-            mPoint++;
-            Log.d("POINTS", "POINT : " + mPoint);
-            clearScreen();
+            finish();
+//            Intent intent = new Intent(this , MultiplayerActivity.class);
+//            startActivity(intent);
         }
     }
 
     public void createTextViews(String word) {
         LinearLayout layoutLetter = (LinearLayout) findViewById(R.id.layoutLetters);
         for (int i = 0; i < word.length(); i++) {
+            TextView textView = (TextView) getLayoutInflater().inflate(R.layout.textview, null);
 
+            //add view to layoutLetters
+            layoutLetter.addView(textView);
         }
     }
 
