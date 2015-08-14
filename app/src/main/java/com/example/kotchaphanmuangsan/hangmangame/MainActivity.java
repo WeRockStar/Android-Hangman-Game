@@ -20,4 +20,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void startMultiGame(View v){
+        Intent intent = new Intent(this , MultiplayerActivity.class);
+        startActivity(intent);
+    }
+
 }
