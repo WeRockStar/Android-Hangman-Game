@@ -26,7 +26,10 @@ public class GameMultiActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_multi_game);
+
+        String wordSent = getIntent().getStringExtra("WORD");
+        Log.d("WORD_SEND", wordSent);
 
         setRandomWord();
     }
