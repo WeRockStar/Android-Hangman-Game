@@ -6,9 +6,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class GameOverActivity extends Activity {
+
+    int mPoint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +24,24 @@ public class GameOverActivity extends Activity {
         TextView textView = (TextView) findViewById(R.id.textViewPoints);
         textView.setText(String.valueOf(points));
 
-        SharedPreferences preferences = getSharedPreferences("MYPREFERENCES", Context.MODE_PRIVATE);
+        mPoint = points;
 
         //1.NAME X POINT
         //2.NAME X POINT
         //...
-        
+    }
 
+    public void saveScore(View v) {
+        SharedPreferences preferences = getSharedPreferences("MYPREFERENCES", Context.MODE_PRIVATE);
+        EditText editText = (EditText) findViewById(R.id.editTextName);
+
+        String name = editText.getText().toString();
+
+        //List Name and edit local storage
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("SCORE", name + " " + mPoint + " POINTS \n");
+
+        //save
+        editor.commit();
     }
 }
