@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kotchaphanmuangsan.hangmangame">
+    package="com.example.kotchaphanmuangsan.hangmangame" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity"></activity>
+        <activity android:name=".GameActivity" />
         <activity
             android:name=".GameMultiActivity"
-            android:label="@string/title_activity_game_over">
-
+            android:label="@string/title_activity_game_over" >
         </activity>
         <activity
             android:name=".GameOverActivity"
-            android:label="@string/title_activity_game_over"></activity>
+            android:label="@string/title_activity_game_over" />
         <activity
             android:name=".MultiplayerActivity"
-            android:label="@string/title_activity_multiplayer"></activity>
+            android:label="@string/title_activity_multiplayer" />
+        <activity
+            android:name=".ScoreActivity"
+            android:label="@string/title_activity_score" >
+        </activity>
     </application>
 
 </manifest>
