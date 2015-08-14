@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
+            android:onClick="openScore"
             android:text="Score" />
     </LinearLayout>
 

@@ -25,4 +25,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void openScore(View v){
+        Intent intent = new Intent(this , ScoreActivity.class);
+        startActivity(intent);
+    }
+
 }
